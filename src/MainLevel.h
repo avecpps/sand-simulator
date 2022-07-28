@@ -1,7 +1,10 @@
 #pragma once
 
+#include <memory>
+#include <vector>
+#include "Cell.h"
 #include "Level.h"
-#include "Player.h"
+#include "Sand.h"
 
 class MainLevel : public Level
 {
@@ -13,5 +16,5 @@ public:
     void Draw(Graphics& graphics);
 
 private:
-    Player player;
+    std::vector<std::unique_ptr<Cell>> cells;
 };
