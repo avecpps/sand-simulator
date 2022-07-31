@@ -1,6 +1,7 @@
 # Prerequisites
 *.d
 sand-simulator
+.clang-format
 
 # Compiled Object files
 *.slo
