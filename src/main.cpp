@@ -10,6 +10,8 @@
 
 int main()
 {
+    Graphics graphics;
+    
     int currentLevel = 0;
 
     std::vector<std::unique_ptr<Level>> levels;
@@ -17,8 +19,6 @@ int main()
     levels.push_back(std::make_unique<MainLevel>());
 
     bool shouldQuit = false;
-
-    Graphics graphics;
 
     float deltaTime;
     

@@ -1,10 +1,10 @@
 #pragma once
 
+#include "Cell.h"
 #include "Level.h"
-#include <memory>
 #include <vector>
 
-class MainLevel : public Level 
+class MainLevel : public Level
 {
 public:
     MainLevel();
@@ -14,4 +14,10 @@ public:
     void Draw(Graphics &graphics);
 
 private:
+    std::vector<Cell> grid;
+
+    float timer;
+
+    int width;
+    int height;
 };
