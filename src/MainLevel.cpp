@@ -15,15 +15,17 @@ MainLevel::MainLevel()
     }
 
     grid[10].currentState = CellState::Sand;
+
+    timerThreshold = 1000.0f;
 }
 
 void MainLevel::Update(float deltaTime)
 {
-    if (timer >= 1000.0f)
+    if (timer >= timerThreshold)
     {
         std::vector<Cell> copyGrid = grid;
 
-        timer -= 1000.0f;
+        timer -= timerThreshold;
 
         for (int i = 0; i < grid.size(); i++)
         {

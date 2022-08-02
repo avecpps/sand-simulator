@@ -18,6 +18,8 @@ private:
 
     float timer;
 
+    float timerThreshold;
+
     int width;
     int height;
 };
